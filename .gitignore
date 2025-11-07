@@ -1,0 +1,21 @@
+################################################################################
+# .gitignore
+################################################################################
+
+# Do not commit our Python Virtual Environment.
+.venv/
+
+# Do not commit any input files, but keep the README.
+inputs/*
+!inputs/README.md
+
+# Do not commit our Advent-of-Code session token.
+.aoc-session
+
+# Do not commit any pycache
+__pycache__
+
+
+################################################################################
+# END
+################################################################################
