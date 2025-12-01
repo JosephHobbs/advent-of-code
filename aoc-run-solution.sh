@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 ################################################################################
-# aoc-run-solution.bash
+# aoc-run-solution.sh
 ################################################################################
 
 if [[ -d ".venv" ]]
@@ -9,9 +9,9 @@ then
   source .venv/bin/activate
 else
   echo "Initializing new virtual environment..."
-  python3 -m venv .venv
+  uv venv .venv
   source .venv/bin/activate
-  pip install -r requirements.txt
+  uv pip install -r requirements.txt
 fi
 
 python3 aoc-run-solution.py $@

@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 ################################################################################
-# aoc-get-inputs.bash
+# aoc-get-inputs.sh
 #
 # Fetches the input and example data for a given Advent of Code day and year,
 # and writes the results to the inputs directory for later use.
