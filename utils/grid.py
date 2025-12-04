@@ -76,6 +76,9 @@ class Grid:
     def get_coordinate(self, x: int, y: int) -> Coordinate:
         return Coordinate(x, y, self._resolve_coordinate_data(x, y))
     
+    def set_coordinate_value(self, x: int, y: int, value: str):
+        self.data[y][x] = value
+    
     def _resolve_coordinate_data(self, x: int, y: int) -> list:
 
         if (y >= len(self.data)) and (x >= len(self.data[0])):
