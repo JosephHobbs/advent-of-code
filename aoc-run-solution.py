@@ -65,7 +65,7 @@ def read_input(filename: str) -> list:
 
     with open(filename) as input_file:
         for input_line in input_file:
-            data.append(input_line.strip())
+            data.append(input_line.rstrip())
 
     return data
 
