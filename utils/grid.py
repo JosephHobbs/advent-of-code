@@ -57,12 +57,29 @@ class Coordinate:
             return str(value)
         else:
             return None
+    
+    def __eq__(self, other) -> bool:
 
+        if other == self:
+            return True
+        if self.x == other.x and self.y == other.y:
+            return True
+
+        return False
+    
+    def __hash__(self):
+        return hash(f'utils.grid.Coordinate,x={self.x},y={self.y}')
 
 class Grid:
 
     def __init__(self):
         self.data = []
+        self.row_count = None
+        self.col_count = None
+
+    def set_counts(self, row_count, col_count):
+        self.row_count = row_count
+        self.col_count = col_count
 
     def add_row_str(self, row: str):
 
